@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+.teste {
+  @apply
+bg-red-400 text-3xl font-bold underline
+}
+
+
+
+.page-background {
+  background-image: url('/background.png');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  position: relative; /* necessário para o pseudo-elemento */
+}
+
+.page-background::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255,255,255,0.5); /* cor semi-transparente */
+  z-index: 0;
+}
+
+.page-background > * {
+  position: relative;
+  z-index: 1; /* garante que o conteúdo fique acima do fundo transparente */
+}
+
+
+.side_bar {
+  @apply
+  bg-green-800 w-fit h-full
+}

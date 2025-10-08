@@ -35,3 +35,6 @@ bg-red-400 text-3xl font-bold underline
   @apply
   bg-green-800 w-fit h-full
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
